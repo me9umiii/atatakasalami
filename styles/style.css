@@ -1,0 +1,219 @@
+@import "compass/css3";
+
+@font-face {
+    font-family: "myfont";
+    src: url("../fonts/KH-Dot-Akihabara-16.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "851letrogo";
+    src: url(../fonts/851letrogo_007.ttf) format("truetype");
+}
+
+a,a:hover,a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+h1{
+    font-family: "851letrogo";
+    color: rgb(228, 62, 219);
+    font-size: 38px;
+}
+
+body {
+    background: linear-gradient(to right, black, transparent 90%);
+    background-image: url(../assets/background.png);
+    background-size: cover;
+    background-color: #ffffff;
+    margin-right: 480px;
+    margin-left: 480px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: "myfont";
+}
+
+ul {
+    display: block;
+    list-style: none;
+    margin: auto;
+}
+
+.centerUL {
+    margin: auto;
+    line-height: 1.4;
+    padding-left: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+li {
+    background-color: #FFFFFF;
+    font-size: 24px;
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    
+}
+
+#portrait {
+    max-width: 240px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#cube {
+    margin-bottom: -10px;
+}
+
+.vertical_menu {
+    text-align: center;
+    display: inline-block;
+    position: ablsolute;
+    top: 2px; 
+    
+}
+
+.blogbox {
+    margin-top: 1px;
+    border-spacing: 0px; 
+    border-radius: 10px; 
+    vertical-align: top; 
+    background: #FFFFFF; 
+    padding: 10px 10px 10px 1px; 
+    overflow: auto; 
+    text-align: center;
+
+    background-color: #FFFFFF;
+    height: 650px;
+    padding: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.blogpic {
+    max-width: 450px;
+    height: auto;
+}
+
+.sidebar {
+    background-image: url();
+    height: 620px;
+    width: 250px;
+    position: inline;
+    margin-top: auto;
+    margin-left: 10px;
+    float: right;
+    border: 4px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+}
+
+.credit {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+@keyframes flicker {
+    0% {
+      opacity: 0.27861;
+    }
+    5% {
+      opacity: 0.34769;
+    }
+    10% {
+      opacity: 0.23604;
+    }
+    15% {
+      opacity: 0.90626;
+    }
+    20% {
+      opacity: 0.18128;
+    }
+    25% {
+      opacity: 0.83891;
+    }
+    30% {
+      opacity: 0.65583;
+    }
+    35% {
+      opacity: 0.67807;
+    }
+    40% {
+      opacity: 0.26559;
+    }
+    45% {
+      opacity: 0.84693;
+    }
+    50% {
+      opacity: 0.96019;
+    }
+    55% {
+      opacity: 0.08594;
+    }
+    60% {
+      opacity: 0.20313;
+    }
+    65% {
+      opacity: 0.71988;
+    }
+    70% {
+      opacity: 0.53455;
+    }
+    75% {
+      opacity: 0.37288;
+    }
+    80% {
+      opacity: 0.71428;
+    }
+    85% {
+      opacity: 0.70419;
+    }
+    90% {
+      opacity: 0.7003;
+    }
+    95% {
+      opacity: 0.36108;
+    }
+    100% {
+      opacity: 0.24387;
+    }
+  }
+  
+  .crt::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+  }
+  .crt::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+  .crt {
+    animation: textShadow 4s infinite;
+  }
