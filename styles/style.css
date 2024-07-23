@@ -28,7 +28,7 @@ body {
     background-color: #ffffff;
     margin-right: 480px;
     margin-left: 480px;
-    max-width: 1000px;
+    width: 53%;
     margin: auto;
     font-family: "myfont";
 }
@@ -96,6 +96,14 @@ li {
 .blogpic {
     max-width: 450px;
     height: auto;
+}
+
+.art {
+    max-width: 450px;
+    height: auto;
+    float: left;
+    padding-left: 10px;
+    padding-bottom: 20px;
 }
 
 .sidebar {
