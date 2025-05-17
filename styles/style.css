@@ -1,5 +1,3 @@
-@import "compass/css3";
-
 @font-face {
     font-family: "myfont";
     src: url("../fonts/KH-Dot-Akihabara-16.ttf") format("truetype");
@@ -10,28 +8,47 @@
     src: url(../fonts/851letrogo_007.ttf) format("truetype");
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;     /* 最大幅を指定 */
+  max-height: 1080px;    /* 最大高さを指定 */
+  z-index: -1;
+
+  margin: 0 auto;
+  right: 0;
+  bottom: 0;
+}
+
 a,a:hover,a:visited{
     color: inherit;
     text-decoration: none;
 }
 
 h1{
+
+
     font-family: "851letrogo";
-    color: rgb(228, 62, 219);
-    font-size: 38px;
+    color: rgb(255, 0, 242);
+    font-size: 45px;
+    text-align: left;
 }
 
 body {
-    background: linear-gradient(to right, black, transparent 90%);
+
+   /* background: linear-gradient(to right, black, transparent 90%);
     background-image: url(../assets/background.png);
-    background-size: cover;
+    background-size: cover; */
     background-color: #ffffff;
-    margin-right: 480px;
-    margin-left: 480px;
-    width: 53%;
+    width: 900px;
     margin: auto;
     font-family: "myfont";
 }
+
+
 
 ul {
     display: block;
@@ -40,6 +57,8 @@ ul {
 }
 
 .centerUL {
+    display: flex;
+    justify-content: center;  /* 横方向中央 */
     margin: auto;
     line-height: 1.4;
     padding-left: 0;
@@ -48,7 +67,8 @@ ul {
 }
 
 li {
-    background-color: #FFFFFF;
+
+    background-color: rgb(255, 0, 221, 0.158);
     font-size: 24px;
     float: left;
     padding-left: 20px;
@@ -68,6 +88,13 @@ li {
     margin-bottom: -10px;
 }
 
+#icon {
+    width: 90%;
+    height: 30%;
+    border: 3px solid black;
+        border-radius: 10px;
+}
+
 .vertical_menu {
     text-align: center;
     display: inline-block;
@@ -76,21 +103,37 @@ li {
     
 }
 
-.blogbox {
-    margin-top: 1px;
-    border-spacing: 0px; 
-    border-radius: 10px; 
-    vertical-align: top; 
-    background: #FFFFFF; 
-    padding: 10px 10px 10px 1px; 
-    overflow: auto; 
-    text-align: center;
+.inner_container {
+     min-width: 870px; 
+  display: flex;
+  gap: 20px;
+}
 
-    background-color: #FFFFFF;
-    height: 650px;
-    padding: 20px;
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 10px;
+.blogbox {
+  width: 650px;
+  height: 700px;
+  background-color: rgba(255, 0, 221, 0.158);
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+    /* スクロールを有効にする */
+  overflow-y: auto;  /* 縦方向にスクロール */
+  overflow-x: hidden; /* 横スクロールは無効に */
+}
+
+.sidebar {
+  width: 250px;
+  height: 700px;
+  background-color: rgba(255, 0, 221, 0.158);
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+    text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
 }
 
 .blogpic {
@@ -106,122 +149,24 @@ li {
     padding-bottom: 20px;
 }
 
-.sidebar {
-    background-image: url();
-    height: 620px;
-    width: 250px;
-    position: inline;
-    margin-top: auto;
-    margin-left: 10px;
-    float: right;
-    border: 4px;
-    padding: 5px;
-    border: 2px solid black;
-    border-radius: 5px;
-    position: sticky;
-    top: 0;
-    position: -webkit-sticky;
-}
+
 
 .credit {
     margin-top: 30px;
     text-align: center;
 }
 
-
-@keyframes flicker {
-    0% {
-      opacity: 0.27861;
-    }
-    5% {
-      opacity: 0.34769;
-    }
-    10% {
-      opacity: 0.23604;
-    }
-    15% {
-      opacity: 0.90626;
-    }
-    20% {
-      opacity: 0.18128;
-    }
-    25% {
-      opacity: 0.83891;
-    }
-    30% {
-      opacity: 0.65583;
-    }
-    35% {
-      opacity: 0.67807;
-    }
-    40% {
-      opacity: 0.26559;
-    }
-    45% {
-      opacity: 0.84693;
-    }
-    50% {
-      opacity: 0.96019;
-    }
-    55% {
-      opacity: 0.08594;
-    }
-    60% {
-      opacity: 0.20313;
-    }
-    65% {
-      opacity: 0.71988;
-    }
-    70% {
-      opacity: 0.53455;
-    }
-    75% {
-      opacity: 0.37288;
-    }
-    80% {
-      opacity: 0.71428;
-    }
-    85% {
-      opacity: 0.70419;
-    }
-    90% {
-      opacity: 0.7003;
-    }
-    95% {
-      opacity: 0.36108;
-    }
-    100% {
-      opacity: 0.24387;
-    }
-  }
+.crt::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
   
-  .crt::after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(18, 16, 16, 0.1);
-    opacity: 0;
-    z-index: 2;
-    pointer-events: none;
-    animation: flicker 0.15s infinite;
-  }
-  .crt::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    z-index: 2;
-    background-size: 100% 2px, 3px 100%;
-    pointer-events: none;
-  }
-  .crt {
-    animation: textShadow 4s infinite;
-  }
+}

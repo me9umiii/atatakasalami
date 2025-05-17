@@ -5,9 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <title>ひとりごと</title>
         <link href="styles/style.css" rel="stylesheet"/>
+
+        <!-- Three.jsのインポート -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+      integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     </head>
 
     <body class="crt">
+
         <div class="vertical_menu" id="centerDiv">
             <ul id="nav" class="centerUL">
                 <li><a href="./index.html">TOP</a></li>
@@ -16,38 +25,63 @@
             </ul>
          </div>
 
+              <h1>あたたかサラミ</h1>
+
         <div class="inner_container">
-                <h1>あたたかサラミ</h1>
+  
+            <!-- 自己紹介 -->
+            <div class="sidebar">
+
+                    <hr>
+                    <p>ようこそ！</p>
+                    <p>自由奔放なサイトです</p>
+
+                    <p>イラストやゲームを作ってアップします</p>
+                    <p>(R18-G注意)</p>
+                    <p></p>
+                    <hr>
+
+            </div>        
+            <!-- ブログ -->
             <div class="blogbox">
-                    <div class="sidebar">
-                        <img id="portrait" src="./assets/profile3.PNG">
-                        <p>ようこそ<b>あたたかサラミ</b>へ！</p>
-                        <p>ここはぼくが自由気ままに作ったものをぺたぺたするサイトです♡<br>みていってくれるとうれしいな♪</p>
-                        <p>ただえっちとぐろちゅういかも</p>
-                        <hr>
-                        <p>SNS等</p>
-                        <a href="https://twitter.com/me9umi__">♡Twitter</a>
-                    </div>
+
+
+
                     <h2><img id="cube" src="./assets/cube.gif"> ひとりごと</h2>
                     <hr>
+                    <b>2025年5月17日</b>
+                    <h2>ほぼ１年ぶりの更新だね</h2>
+                    <p>最近はGLSLのシェーダー言語を学び始めた。</p>
+                    <p>発端はBalatroのゲーム背景がGLSLで作られていたことを知ったことが始まり、</p>
+                    <p>ゲームだけじゃなくてこのウェブサイトの背景も2Dシェーダーで表現できる</p>
+                    <p>のではないかと試した結果更新に至ったというわけだ。</p>
+                    <p>ゲーム開発の方はというと順調だが、ドッド絵やイラストはなかなか納得いく</p>
+                    <p>ものが作れなくて頭がパンク状態...</p>
+                    <p>なにがともあれ久しぶりに更新できてよかった。</p>
+
+                    <hr>
+
                     <b>2024年7月22日</b>
                     <br>
-                    <h2>サイトをgithubで一旦開設したよ！</h2>
+                    <h2>サイトをgithubで一旦開設したよ</h2>
                     <p>将来的にはサーバーを移して、えっちなものも見せられるようにしたいにぇ</p>
                     <p>ロゴもかわいく作るよてー</p>
+
                     <hr>
-                    <b>2024年7月21日</b>
-                    <br>
-                    <h2>256メラニちゃんを作っています！</h2>
-                    <img class="blogpic" src="./assets/blenderss.PNG">
-                    <p>Windowsライセンス映ってるけど気にしないで:?</p>
+
+                    
                 </div>
-            </div>    
+            </div>   
+            
         </div>
 
         <div class="credit">
             <hr>
             <p>©2024 ATATAKASALAMI</p>
         </div>
+        
+        <!-- three.jsを使ったシーンのインポート -->
+        <script type="module" src="main.js"></script>
+
     </body>
 </html>
