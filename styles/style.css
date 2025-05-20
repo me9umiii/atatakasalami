@@ -50,22 +50,20 @@ h1{
     color: rgb(255, 75, 231);
     font-size: 60px;
     text-align: left;
-
-
 }
 
 body {
-
-   /* background: linear-gradient(to right, black, transparent 90%);
-    background-image: url(../assets/background.png);
-    background-size: cover; */
     background-color: #ffffff;
     width: 900px;
     margin: auto;
     font-family: "myfont";
 }
 
+.row {
+    display: flex;
+    gap: 10px;
 
+}
 
 ul {
     display: block;
@@ -76,7 +74,7 @@ ul {
 
 .centerUL {
     display: flex;
-    justify-content: center;  /* 横方向中央 */
+    justify-content: center;
     margin: auto;
     line-height: 1.4;
     padding-left: 0;
@@ -85,7 +83,6 @@ ul {
 }
 
 li {
-
     background-color: rgba(255, 255, 255, 0.596);
     font-size: 24px;
     float: left;
@@ -93,7 +90,6 @@ li {
     padding-right: 20px;
     border: 2px solid black;
     border-radius: 10px;
-    
 }
 
 #portrait {
@@ -118,7 +114,11 @@ li {
 
 #counter {
     float: right;
+}
 
+#thumb {
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 20px;
 }
 
 .vertical_menu {
@@ -187,6 +187,8 @@ li {
   content: " ";
   display: block;
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   bottom: 0;
@@ -195,5 +197,4 @@ li {
   z-index: 2;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
-  
 }
